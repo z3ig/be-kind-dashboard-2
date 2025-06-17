@@ -59,7 +59,7 @@ export default function BeKindDashboard() {
   };
 
   return (
-    <div className={\`\${dark ? 'dark' : ''} font-sans\`}>
+    <div className={`${dark ? 'dark' : ''} font-sans`}={\`\${dark ? 'dark' : ''} font-sans\`}>
       <div className="p-4 flex justify-between items-center sticky top-0 z-10 bg-white dark:bg-gray-900 border-b">
         <h1 className="text-xl font-bold text-ops-orange">Be Kind 2025 – Dashboard</h1>
         <div className="space-x-2">
