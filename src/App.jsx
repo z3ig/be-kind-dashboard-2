@@ -13,7 +13,7 @@ export default function App() {
         <BeKindDashboard />
       </main>
       <footer className="text-center text-sm text-gray-500 p-4 border-t">
-        © {new Date().getFullYear()} Outlet Park Szczecin
+        © {new Date().getFullYear()} <a href="https://evenema.com" className="underline hover:text-orange-600" target="_blank" rel="noopener noreferrer">evenema.com</a>
       </footer>
     </div>
   );
