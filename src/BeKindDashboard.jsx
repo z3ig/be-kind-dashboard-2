@@ -76,12 +76,17 @@ export default function BeKindDashboard() {
         {tasks.map((week, idx) => (
           <section key={idx} className={\`snap-start min-h-screen flex flex-col justify-center px-8 py-16 \${week.color} dark:bg-gray-800 dark:text-white\`}>
             <h2 className="text-3xl font-headline mb-4">{week.title}</h2>
-            <ul className="space-y-2 text-lg">
+            <ul className="space-y-3 text-lg">
               {week.items.map((item, i) => {
                 const key = \`\${idx}_\${i}\`;
                 return (
-                  <li key={key}>
-                    <input type="checkbox" className="mr-2" checked={checked[key] || false} onChange={() => toggleCheck(key)} />
+                  <li key={key} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      className="mr-3 w-5 h-5 accent-[#ff6600] form-checkbox rounded border-white"
+                      checked={checked[key] || false}
+                      onChange={() => toggleCheck(key)}
+                    />
                     {item}
                   </li>
                 );
