@@ -59,7 +59,7 @@ export default function BeKindDashboard() {
   };
 
   return (
-    <div className={`${dark ? 'dark' : ''} font-sans`}={\`\${dark ? 'dark' : ''} font-sans\`}>
+    <div className={`${dark ? 'dark' : ''} font-sans`}>
       <div className="p-4 flex justify-between items-center sticky top-0 z-10 bg-white dark:bg-gray-900 border-b">
         <h1 className="text-xl font-bold text-ops-orange">Be Kind 2025 – Dashboard</h1>
         <div className="space-x-2">
@@ -74,11 +74,11 @@ export default function BeKindDashboard() {
 
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
         {tasks.map((week, idx) => (
-          <section key={idx} className={\`snap-start min-h-screen flex flex-col justify-center px-8 py-16 \${week.color} dark:bg-gray-800 dark:text-white\`}>
+          <section key={idx} className={`snap-start min-h-screen flex flex-col justify-center px-8 py-16 ${week.color} dark:bg-gray-800 dark:text-white`}>
             <h2 className="text-3xl font-headline mb-4">{week.title}</h2>
             <ul className="space-y-3 text-lg">
               {week.items.map((item, i) => {
-                const key = \`\${idx}_\${i}\`;
+                const key = `${idx}_${i}`;
                 return (
                   <li key={key} className="flex items-center">
                     <input
